@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CustomerInquiry.DataAccess\CustomerInquiry.DataAccess.csproj" />
+    <ProjectReference Include="..\CustomerInquiry.Services\CustomerInquiry.Services.csproj" />
   </ItemGroup>
 
 </Project>
