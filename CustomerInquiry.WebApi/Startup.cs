@@ -1,4 +1,6 @@
 ﻿using CustomerInquiry.DataAccess;
+using CustomerInquiry.Services;
+using CustomerInquiry.Services.Implementation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +26,7 @@ namespace CustomerInquiry.WebApi
 
             services.AddDbContext<CustomerInquiryDbContext>(opt => opt.UseSqlServer(connString));
 
+            services.AddTransient<ICustomerService, CustomerService>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
