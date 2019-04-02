@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerInquiry.WebApi", "CustomerInquiry.WebApi\CustomerInquiry.WebApi.csproj", "{3E83C92A-8520-4DC1-9D53-51760A888B8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerInquiry.WebApi", "CustomerInquiry.WebApi\CustomerInquiry.WebApi.csproj", "{3E83C92A-8520-4DC1-9D53-51760A888B8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerInquiry.DataAccess", "CustomerInquiry.DataAccess\CustomerInquiry.DataAccess.csproj", "{4B1CB072-9B1A-49B8-B61E-63B0062A9243}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerInquiry.DataAccess", "CustomerInquiry.DataAccess\CustomerInquiry.DataAccess.csproj", "{4B1CB072-9B1A-49B8-B61E-63B0062A9243}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerInquiry.Services", "CustomerInquiry.Services\CustomerInquiry.Services.csproj", "{41BF6D40-8A7B-4B91-AF0C-C66920375DD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerInquiry.Services", "CustomerInquiry.Services\CustomerInquiry.Services.csproj", "{41BF6D40-8A7B-4B91-AF0C-C66920375DD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerInquiry.Tests", "CustomerInquiry.Tests\CustomerInquiry.Tests.csproj", "{BB1DAB9F-AC8F-4706-A5D7-E13EC604AE82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{41BF6D40-8A7B-4B91-AF0C-C66920375DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41BF6D40-8A7B-4B91-AF0C-C66920375DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41BF6D40-8A7B-4B91-AF0C-C66920375DD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB1DAB9F-AC8F-4706-A5D7-E13EC604AE82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB1DAB9F-AC8F-4706-A5D7-E13EC604AE82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB1DAB9F-AC8F-4706-A5D7-E13EC604AE82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB1DAB9F-AC8F-4706-A5D7-E13EC604AE82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
