@@ -4,14 +4,16 @@ using CustomerInquiry.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CustomerInquiry.DataAccess.Migrations
 {
     [DbContext(typeof(CustomerInquiryDbContext))]
-    partial class CustomerInquiryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190402073853_InitTestData")]
+    partial class InitTestData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
