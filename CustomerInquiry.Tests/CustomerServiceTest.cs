@@ -8,6 +8,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CustomerInquiry.Tests
 {
@@ -30,17 +31,17 @@ namespace CustomerInquiry.Tests
         }
 
         [Test]
-        public void ShouldReturnCustomerWithTransactions()
+        public async Task ShouldReturnCustomerWithTransactions()
         {
-            var result = _customerService.GetCustomerInfoAsync(1, 5).Result;
+            var result = await _customerService.GetCustomerInfoAsync(1, 5);
 
             Assert.Positive(result.Data.Transactions.Count);
         }
 
         [Test]
-        public void ShouldReturnNotFound()
+        public async Task ShouldReturnNotFound()
         {
-            var result = _customerService.GetCustomerInfoAsync(2, 5).Result;
+            var result = await _customerService.GetCustomerInfoAsync(2, 5);
 
             Assert.AreEqual(result.Status, ServiceResultStatus.NotFound);
         }
