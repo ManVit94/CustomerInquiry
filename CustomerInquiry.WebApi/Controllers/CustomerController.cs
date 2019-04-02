@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CustomerInquiry.Services;
 using CustomerInquiry.WebApi.Models;
+using CustomerInquiry.WebApi.Validators;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,10 +25,20 @@ namespace CustomerInquiry.WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetCustomer(CustomerRequestModel request)
         {
+            var validationMessage = CustomerControllerValidator.ValidateGetCustomerRequest(request);
+            if (validationMessage != null)
+            {
+                return BadRequest(validationMessage);
+            }
+
             if (request.CustomerId > 0)
             {
                 var serviceResult = await _customerService.GetCustomerInfoAsync(request.CustomerId, TAKE_TRANSACTIONS_COUNT);
 
+                if (serviceResult.Status == ServiceResultStatus.NotFound)
+                {
+                    serviceResult = await _customerService.GetCustomerInfoAsync(request.Email, TAKE_TRANSACTIONS_COUNT);
+                }
                 return ReturnResult(serviceResult);
             }
             else
